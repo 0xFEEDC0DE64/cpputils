@@ -62,19 +62,19 @@ template<> inline tl::expected<uint32_t, std::string> fromString<uint32_t>(std::
 }
 
 #ifdef ESP_PLATFORM
-template<> inline tl::expected<int, std::string> fromString<int>(std::string_view str)
+template<> inline tl::expected<long, std::string> fromString<long>(std::string_view str)
 {
-    int val;
-    if (std::sscanf(str.data(), "%" SCNi32, &val) != 1)
-        return tl::make_unexpected(fmt::format("invalid int {}", str));
+    long val;
+    if (std::sscanf(str.data(), "%li", &val) != 1)
+        return tl::make_unexpected(fmt::format("invalid long {}", str));
     return val;
 }
 
-template<> inline tl::expected<unsigned int, std::string> fromString<unsigned int>(std::string_view str)
+template<> inline tl::expected<unsigned long, std::string> fromString<unsigned long>(std::string_view str)
 {
-    unsigned int val;
-    if (std::sscanf(str.data(), "%" SCNu32, &val) != 1)
-        return tl::make_unexpected(fmt::format("invalid unsigned int {}", str));
+    unsigned long val;
+    if (std::sscanf(str.data(), "%lu", &val) != 1)
+        return tl::make_unexpected(fmt::format("invalid unsigned long {}", str));
     return val;
 }
 #endif

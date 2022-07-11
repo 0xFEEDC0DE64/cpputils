@@ -13,10 +13,10 @@ template<> struct RefWhenNeeded<int16_t>                      { using T = int16_
 template<> struct RefWhenNeeded<uint16_t>                     { using T = uint16_t;                     RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<int32_t>                      { using T = int32_t;                      RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<uint32_t>                     { using T = uint32_t;                     RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
-template<> struct RefWhenNeeded<int>                          { using T = int;                          RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
-template<> struct RefWhenNeeded<unsigned int>                 { using T = unsigned int;                 RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<int64_t>                      { using T = int64_t;                      RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<uint64_t>                     { using T = uint64_t;                     RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
+template<> struct RefWhenNeeded<long>                         { using T = long;                         RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
+template<> struct RefWhenNeeded<unsigned long>                { using T = unsigned long;                RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<float>                        { using T = float;                        RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<double>                       { using T = double;                       RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<bool>>          { using T = std::optional<bool>;          RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
@@ -26,10 +26,10 @@ template<> struct RefWhenNeeded<std::optional<int16_t>>       { using T = std::o
 template<> struct RefWhenNeeded<std::optional<uint16_t>>      { using T = std::optional<uint16_t>;      RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<int32_t>>       { using T = std::optional<int32_t>;       RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<uint32_t>>      { using T = std::optional<uint32_t>;      RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
-template<> struct RefWhenNeeded<std::optional<int>>           { using T = std::optional<int>;           RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
-template<> struct RefWhenNeeded<std::optional<unsigned int>>  { using T = std::optional<unsigned int>;  RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<int64_t>>       { using T = std::optional<int64_t>;       RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<uint64_t>>      { using T = std::optional<uint64_t>;      RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
+template<> struct RefWhenNeeded<std::optional<long>>          { using T = std::optional<long>;          RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
+template<> struct RefWhenNeeded<std::optional<unsigned long>> { using T = std::optional<unsigned long>; RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<float>>         { using T = std::optional<float>;         RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 template<> struct RefWhenNeeded<std::optional<double>>        { using T = std::optional<double>;        RefWhenNeeded() = delete; ~RefWhenNeeded() = delete; };
 

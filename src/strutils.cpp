@@ -118,6 +118,19 @@ bool stringEqualsIgnoreCase(std::string_view a, std::string_view b)
                       });
 }
 
+bool stringStartsWith(std::string_view fullString, std::string_view begin)
+{
+    return fullString.rfind(begin, 0) == 0;
+}
+
+bool stringEndsWith(std::string_view fullString, std::string_view ending)
+{
+    if (fullString.length() < ending.length())
+        return false;
+
+    return fullString.compare(fullString.length() - ending.length(), ending.length(), ending) == 0;
+}
+
 //void stringReplaceAll(char search, char replace, std::string &subject)
 //{
 //    size_t start_pos{};
