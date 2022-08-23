@@ -50,6 +50,8 @@ inline std::string toBase64String(std::string_view str)
     return toBase64String(std::basic_string_view<unsigned char>{reinterpret_cast<const unsigned char *>(str.data()), str.size()});
 }
 
+std::string base64_decode(std::string const& encoded_string);
+
 bool stringEqualsIgnoreCase(std::string_view a, std::string_view b);
 bool stringStartsWith(std::string_view fullString, std::string_view begin);
 bool stringEndsWith(std::string_view fullString, std::string_view ending);
